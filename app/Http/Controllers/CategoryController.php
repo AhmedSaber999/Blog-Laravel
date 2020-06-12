@@ -23,7 +23,7 @@ class CategoryController extends Controller
             $category->save();
             return redirect('/category')->with('response', 'Category Added Successfully');
         }catch(Exception $e){
-            return 'aa';
+            return 'Try again';
         }
     }
 }

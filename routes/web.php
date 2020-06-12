@@ -19,10 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/post', 'PostController@index');
-Route::get('/profile', 'ProfileController@index');
+Route::get('home', 'HomeController@index')->name('home');
 
-Route::get('/category', 'CategoryController@index');
-Route::post('/addCategory', 'CategoryController@add_category');
+Route::get('post', 'PostController@index');
+Route::post('addPost', 'PostController@add_post');
+
+Route::get('profile', 'ProfileController@index');
+Route::post('UpdateProfile', 'ProfileController@update_profile');
+
+Route::get('category', 'CategoryController@index');
+Route::post('addCategory', 'CategoryController@add_category');
 
