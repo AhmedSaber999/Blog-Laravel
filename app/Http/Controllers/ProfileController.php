@@ -34,7 +34,7 @@ class ProfileController extends Controller
         if($request->hasFile('profile_pic')){
             $image = $request->file('profile_pic');    
             $image->move(public_path().'/Images/', $image->getClientOriginalName());
-            $url = '/Images' . $image->getClientOriginalName(); 
+            $url = '/Images/' . $image->getClientOriginalName(); 
             $profile->profile_pic = $url;
             $profile->save();
             return redirect('/profile')->with('response', 'Your profile was updated successfully');

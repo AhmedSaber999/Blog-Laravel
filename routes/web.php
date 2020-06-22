@@ -22,7 +22,11 @@ Auth::routes();
 Route::get('home', 'HomeController@index')->name('home');
 
 Route::get('post', 'PostController@index');
-Route::post('addPost', 'PostController@add_post');
+Route::post('addPost', 'PostController@add');
+Route::post('editPost', 'PostController@edit_post');
+Route::get('/post-view/{post_id}', 'PostController@view');
+Route::get('/post-edit/{post_id}', 'PostController@edit');
+Route::post('delete-post', 'PostController@delete');
 
 Route::get('profile', 'ProfileController@index');
 Route::post('UpdateProfile', 'ProfileController@update_profile');
